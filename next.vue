@@ -4,7 +4,7 @@
         <header>生存確認ボタン</header>
         <div id="main">
                 <div id="blocka">
-                    <p  id = "username">名前:</p>
+                    <p id = "username">名前:</p>
                     <div class="perfect-circle">
                         <p id="outer1" class="outer1"></p>
                         <div class="last_log">
@@ -63,7 +63,7 @@ module.exports = {
 
           for(var i= 0; i < maxData; i++) {
             liveLog.push('<li>'+liveData[i]["timestamp"].toDate().getFullYear() +'/'+ (liveData[i]["timestamp"].toDate().getMonth()+1) +'/'+ 
-              liveData[i]["timestamp"].toDate().getDate() +'/'+ liveData[i]["timestamp"].toDate().getHours() +':'+ liveData[i]["timestamp"].toDate().getMinutes() +'</li>');
+              liveData[i]["timestamp"].toDate().getDate() +'/'+ liveData[i]["timestamp"].toDate().getHours() +':'+ liveData[i]["timestamp"].toDate().getMinutes()+ ','+ liveData[i]["comment"]+'</li>');
           }
 
           for(var j = 0; j < maxData; j++) {
@@ -118,14 +118,14 @@ div#blocka {
 
 div#blocka > p{
   color: #B1B1AC;
-  transform: translate(-20%, 60%);
-  font-size:  30px;
+  transform: translate(-13.25%, 20%);
+  font-size: 30px;
   height:40px;
 }
 
 .perfect-circle{
   position: relative;
-  transform: translate(-90%, 20%);
+  transform: translate(-65%, 20%);
   margin: 0px 0px;
   width: 300px;
   height: 300px;
@@ -181,7 +181,7 @@ div#blocka > p{
 div#blockb {
   text-align:center;
   border: 3px solid #B1B1AC;
-  transform: translate(40%, -70%);
+  transform: translate(80%, -70%);
   width: 300px;
   height: 480px;
   margin: 10px auto;
