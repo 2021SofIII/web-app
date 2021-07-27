@@ -1,5 +1,6 @@
 <template>
   <div>
+    <title>ログイン画面</title>
     <div class="header" >
         <h1>LOGIN FORM</h1>
     </div>
@@ -42,7 +43,6 @@ module.exports = {
     return {
       email: '',
       password: '',
-      // userID: '',
     };
   },
   methods: {
@@ -51,14 +51,11 @@ module.exports = {
           .then((userCredential) => {
             // Signed in
             var user = userCredential.user;
-            console.log('Success!');
-            console.log(user.uid);
             this.$router.push('/list');
           })
           .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log('failed', errorCode, errorMessage);
             alert("ログイン失敗");
             this.$router.go(0);
           });
@@ -76,10 +73,6 @@ module.exports = {
         appId: "1:391069982250:web:254cda2218218f2e84ad53",
         measurementId: "G-NP53BXTTT2"
       };
-      // Initialize Firebase
-      // firebase.initializeApp(firebaseConfig);
-      //ログインに永続性を付け加える
-      // firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
       if (firebase.apps.length === 0) {
       firebase.initializeApp(firebaseConfig);
       }

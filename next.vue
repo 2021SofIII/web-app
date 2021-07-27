@@ -1,5 +1,6 @@
 <template>
     <div id = app>
+      <title>リスト画面</title>
         <header>生存確認ボタン</header>
         <div id="main">
                 <div id="blocka">
@@ -36,10 +37,6 @@ module.exports = {
         appId: "1:391069982250:web:278f20700b29f81884ad53",
         measurementId: "G-24N57HCTJQ"
     };
-        // Initialize Firebase
-        // firebase.initializeApp(firebaseConfig);
-        //ログインに永続性を付け加える
-        // firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
         if (firebase.apps.length === 0) {
           firebase.initializeApp(firebaseConfig);
         }
@@ -121,12 +118,14 @@ div#blocka {
 
 div#blocka > p{
   color: #B1B1AC;
+  transform: translate(-20%, 60%);
   font-size:  30px;
   height:40px;
 }
 
 .perfect-circle{
   position: relative;
+  transform: translate(-90%, 20%);
   margin: 0px 0px;
   width: 300px;
   height: 300px;
@@ -182,6 +181,7 @@ div#blocka > p{
 div#blockb {
   text-align:center;
   border: 3px solid #B1B1AC;
+  transform: translate(40%, -70%);
   width: 300px;
   height: 480px;
   margin: 10px auto;
